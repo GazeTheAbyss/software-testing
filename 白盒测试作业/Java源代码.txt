@@ -1,0 +1,55 @@
+package °×ºĞ²âÊÔ;
+
+public class TestCode {
+	private int num1;
+	private int num2;
+	private int num3;
+		
+	public TestCode(int a, int b, int c){
+		num1 = a;
+		num2 = b;
+		num3 = c;
+	}
+	
+	public boolean isEquilatera(){
+		return (num1 == num2 && num1 == num3);
+	}
+	
+	public boolean isIsosceles(){
+		return (num1 == num2 || num1 == num3 || num2 == num3);
+	}
+	
+	public int area(int a, int b, int c){
+		if(a == 0){
+			return 0;
+		}
+		if(a < 0){
+			for(int i = 0 ;i < b; i++){
+				c -= i;
+				if(c < 0){
+					return c;
+				}
+			}
+			if(c < 5){
+				return (c * c);
+			}
+			else{
+				return c;
+			}
+		}
+		else{
+			for(int j = 0; j < b; j++){
+				c +=j;
+				if(c > 20){
+					return c;
+				}
+			}
+			if(c < 5){
+				return (c * c);
+			}
+			else{
+				return  c;
+			}
+		}
+	}
+}
